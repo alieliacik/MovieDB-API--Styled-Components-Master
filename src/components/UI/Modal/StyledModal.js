@@ -10,8 +10,8 @@ export const modalImageEnterAnimation = keyframes`
 export const overviewEnterAnimation = keyframes`
   0% {transform:translate(-50%, -50%) scale(0)}
   60% { transform:translate(-50%, -40%) scale(0);height: 20vh;}
-  66% { transform:translate(-50%, -40%) scale(0);height: 20vh;}
-  67% { transform:translate(-50%, -40%) scale(1);height: 30vh;}
+  68% { transform:translate(-50%, -40%) scale(0);height: 20vh;}
+  69% { transform:translate(-50%, -40%) scale(1);height: 30vh;}
   100% {transform:translate(-50%, -23%) scale(1)}
 `
 export const modalImageExitAnimation = keyframes`
