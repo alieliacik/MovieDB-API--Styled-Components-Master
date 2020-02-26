@@ -9,7 +9,7 @@ import axios from "axios"
 
 const SearchMovies = props => {
   const [searchMovies, setSearchMovies] = useState(null)
-  const [searchInput, setSearchInput] = useState("superman")
+  const [searchInput, setSearchInput] = useState("1")
   const [inputValue, setInputValue] = useState("")
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
