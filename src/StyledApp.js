@@ -15,19 +15,21 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     box-sizing: border-box;
-    font-size:62.5%;
+     font-size:62.5%;         /* 1rem = 10px; */
 
     @media (max-width: 55em){
-      font-size: 55%;
+      font-size: 55%;         /* 1rem = 8.8px; */ 
     }
+
     @media (max-width: 52em){
-      font-size: 50%;
+      font-size: 50%;         /* 1rem = 8px; */
     }
 
   }
 
   body {
     font-family: 'Lato', sans-serif;
+    overflow-y: ${props => (props.showModal ? "hidden" : "scroll")};
   }
 
 `
