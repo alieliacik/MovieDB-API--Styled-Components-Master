@@ -43,7 +43,7 @@ const StyledModal = styled.div`
     top: 30%;
     left: 50%;
     width: 80%;
-    height: 37vh;
+    height: 34vh;
     border-radius: 3px;
     background-color: transparent;
     background-image: ${props => `url(http://image.tmdb.org/t/p/original//${props.modalContent.backdrop_path})`};
