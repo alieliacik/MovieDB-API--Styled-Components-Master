@@ -17,6 +17,7 @@ const PopularMovies = props => {
 
   useEffect(() => {
     setLoading(true)
+    window.scrollTo(0, 0)
     axios
       .get(`https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=${currentPage}`)
       .then(response => {
