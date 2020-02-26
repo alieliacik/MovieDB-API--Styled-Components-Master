@@ -20,6 +20,7 @@ const SearchMovies = props => {
 
   useEffect(() => {
     setLoading(true)
+    window.scrollTo(0, 0)
     axios
       .get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${searchInput}&page=${currentPage}&include_adult=false`)
       .then(response => {
