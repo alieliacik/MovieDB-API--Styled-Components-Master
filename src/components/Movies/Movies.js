@@ -17,30 +17,20 @@ const Movies = props => {
                     <h1 className='ratingFront'>{res.vote_average}</h1>
                   </div>
                   <div className='back'>
-                    <div className='wrapper'>
-                      <div className='titleBox'>
-                        <h1 className='title'>{res.title}</h1>
-                      </div>
-                      <div className='ratingVoteCount'>
-                        <h1 className='rating'>{res.vote_average}</h1>
-                        <h3 className='voteCount'>{res.vote_count} VOTE</h3>
-                      </div>
-                      <div className='languageReleaseDate'>
-                        <span className='language'>
-                          <i className='fontawasomeIcons fas fa-globe-americas'></i>
-                          {res.original_language}
-                        </span>
-                        <span className='releaseDate'>
-                          <i className='fontawasomeIcons far fa-calendar-alt'></i>
-                          {res.release_date.slice(0, 4)}
-                        </span>
-                      </div>
-                      <div className='btnBox'>
-                        <button className='btn' onClick={() => props.openModal(res)}>
-                          <span className='btnText'>OVERVIEW</span>
-                        </button>
-                      </div>
-                    </div>
+                    <h1 className='title'>{res.title}</h1>
+                    <h1 className='rating'>{res.vote_average}</h1>
+                    <h3 className='voteCount'>{res.vote_count} VOTE</h3>
+                    <span className='language'>
+                      <i className='fontawasomeIcons fas fa-globe-americas'></i>
+                      {res.original_language}
+                    </span>
+                    <span className='releaseDate'>
+                      <i className='fontawasomeIcons far fa-calendar-alt'></i>
+                      {res.release_date.slice(0, 4)}
+                    </span>
+                    <button className='btn' onClick={() => props.openModal(res)}>
+                      <span className='btnText'>OVERVIEW</span>
+                    </button>
                   </div>
                 </Card>
               )
