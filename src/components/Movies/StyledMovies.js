@@ -200,7 +200,6 @@ export const Card = styled.div`
         display: inline-block;
         transform: skewX(15deg);
         backface-visibility: hidden;
-        z-index: 1;
       }
 
       &::after {
