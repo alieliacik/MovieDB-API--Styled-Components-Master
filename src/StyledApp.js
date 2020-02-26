@@ -60,6 +60,7 @@ export const Header = styled.header`
   .logo {
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   .logoIcon {
