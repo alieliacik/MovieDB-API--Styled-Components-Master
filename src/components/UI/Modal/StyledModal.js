@@ -118,7 +118,7 @@ const StyledModal = styled.div`
   .overviewTitle {
     font-size: 2.7rem;
     font-weight: 700;
-    margin-top: 6rem;
+    margin-top: 7rem;
     margin-left: 2rem;
     padding-bottom: 1rem;
     padding-left: 1rem;
