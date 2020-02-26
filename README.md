@@ -1,17 +1,16 @@
 <h1 style='text-align:center;'> MOVIE DB API </h1>
 
+<strong> In this project, I used the most updated React Js futures with Styled Components, I used CSS Transition to animate when unmount something from DOM. I took data from THE MOVIE DATABASE API and showed user different data in different situations with nice animations. .</strong>
+
+&nbsp;
+
 ![cardsGif](https://user-images.githubusercontent.com/57728302/75316198-a8185f00-5832-11ea-8075-1ca93964b90d.gif)
 
 <h4><strong>Used technologies: </strong> React JS (React Hooks, Styled Components), HTML, CSS.  </h4>
 <h3>Netlify Link: https://agitated-hugle-838e6c.netlify.com/#/popular</h3>
 <hr>
 
-<strong> In this project, I used the most updated React Js futures with Styled Components, I used CSS Transition to animate when unmount something from DOM. I took data from THE MOVIE DATABASE API and showed user different data in different situations with nice animations. .</strong>
 
-
-<hr>
-
-&nbsp;
 
 
 <strong> Lets start with first animation. I realy like play with aniamtions. I did not use any css library. Because I know how heavy they for for big applications. My firs animation appears once per minute. I didn't want to show user when they visit home page every time. One minute still not to much but of course I can determine the time. Now see the picture below.  </strong>
