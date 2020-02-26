@@ -15,7 +15,7 @@ export const Row = styled.section`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 120rem;
+  max-width: 105rem;
   min-height: 90vh;
   margin: 0 auto;
   background-color: rgba(245, 246, 250, 1);
