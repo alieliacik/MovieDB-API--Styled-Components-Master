@@ -78,7 +78,7 @@ const SearchMovies = props => {
     content = (
       <>
         <StayledErrorButton error={error} onClick={() => setError(true)}>
-          <i className='fas fa-heart-broken fa-2x'> </i> BRAKE
+          <i className='fas fa-heart-broken fa-2x'> </i> BREAK
         </StayledErrorButton>
         <Modal showModal={props.showModal} closeModal={props.closeModal} modalContent={props.modalContent} />
         <StyledSearchMovies onSubmit={event => onSubmitHandler(event)}>
