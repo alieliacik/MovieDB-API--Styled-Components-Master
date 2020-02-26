@@ -7,15 +7,16 @@ to {opacity: 1}
 `
 
 const StyledHomePage = styled.section`
-  background-image: linear-gradient(to right, rgba(194, 54, 22, 0.1), rgba(194, 54, 22, 0.4)), url(${homeImage});
+  background-image: linear-gradient(140deg, rgba(194, 54, 22, 0.1), rgba(194, 54, 22, 0.6)), url(${homeImage});
   background-size: cover;
   background-position: center;
   min-height: 90vh;
 
   .mainContent {
     font-size: 3rem;
+    display: inline-block;
     font-weight: bold;
-    background-image: linear-gradient(to right, rgba(194, 54, 22, 0.8), rgba(194, 54, 22, 0.8), white);
+    background-image: linear-gradient(to right, rgba(194, 54, 22, 0.8), black, black);
     color: transparent;
     -webkit-background-clip: text;
 
