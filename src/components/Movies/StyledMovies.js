@@ -35,8 +35,8 @@ export const Card = styled.div`
   }
 
   & > div {
-    top: 0;
-    left: 0;
+    top: -1rem;
+    left: -1rem;
     width: 18rem;
     height: 27rem;
     position: absolute;
@@ -59,7 +59,6 @@ export const Card = styled.div`
     background-image: ${props => `linear-gradient(170deg, rgba(53, 59, 72, 0.98) 0%, rgba(53, 59, 72, 0.98) 8%, transparent 23%), url(http://image.tmdb.org/t/p/w200/${props.res.poster_path})`};
     background-size: cover;
     transform: rotateY(0);
-    z-index: 1;
   }
 
   .ratingFront {
@@ -72,15 +71,37 @@ export const Card = styled.div`
   }
   .back {
     color: #fff;
-    background-color: #fcd057;
+    background-image: linear-gradient(to right bottom, rgba(0, 151, 230, 1), rgba(220, 221, 225, 1));
     transform: rotateY(180deg);
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      bottom: -0.7rem;
+      left: 0.2rem;
+      background-image: url(${camera});
+      background-size: cover;
+      width: 6rem;
+      height: 6rem;
+      z-index: 15;
+      opacity: 0.25;
+
+      @supports (mask-size: cover) {
+        background-color: #f5f6fa;
+        mask-image: url(${camera});
+        mask-size: cover;
+        background-image: none;
+      }
+    }
 
     &::after {
       content: "";
       display: inline-block;
       position: absolute;
-      top: 0.1rem;
-      right: 0.4rem;
+      top: 0;
+      right: 0.2rem;
       background-image: url(${family});
       background-size: cover;
       width: 2.7rem;
@@ -95,55 +116,32 @@ export const Card = styled.div`
       }
     }
 
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      backface-visibility: hidden;
-      border-radius: 3px;
-      background-image: linear-gradient(to right bottom, rgba(0, 151, 230, 1), rgba(220, 221, 225, 1));
-      clip-path: polygon(70% 0, 100% 18%, 100% 100%, 0 100%, 0 0);
-      transform: rotateY(0);
-
-      &::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        bottom: -0.7rem;
-        left: 0.2rem;
-        background-image: url(${camera});
-        background-size: cover;
-        width: 6rem;
-        height: 6rem;
-        z-index: 15;
-        opacity: 0.25;
-
-        @supports (mask-size: cover) {
-          background-color: #f5f6fa;
-          mask-image: url(${camera});
-          mask-size: cover;
-          background-image: none;
-        }
-      }
-    }
-
     .title {
       font-size: 2.3rem;
       font-family: "Lato";
       padding: 3rem 1rem 0 1rem;
       font-weight: 400;
       letter-spacing: 2px;
-      line-height: 2.1rem;
+      line-height: 2.05rem;
       height: 9rem;
-
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+        background-color: #fcd057;
+        background-size: cover;
+        width: 7.1rem;
+        height: 7.1rem;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+      }
     }
 
     .rating {
@@ -157,33 +155,35 @@ export const Card = styled.div`
       font-weight: 300;
     }
 
-    .languageReleaseDate {
-      display: flex;
-      justify-content: space-around;
-      margin: 1.5rem 0;
-    }
-
     .language {
+      position: absolute;
+      left: -15%;
+      margin-top: 2.4rem;
       text-transform: uppercase;
       position: relative;
       font-size: 1.3rem;
     }
 
     .releaseDate {
+      position: absolute;
+      display: inline-block;
+      left: 19%;
+      margin-top: 2.4rem;
+      text-transform: uppercase;
       position: relative;
       font-size: 1.3rem;
     }
 
-    .btnBox {
-      display: flex;
-      justify-content: flex-end;
-      padding-right: 1.5rem;
+    .fontawasomeIcons {
+      margin-right: 0.5rem;
     }
 
     .btn {
-      font-weight: 300;
+      position: absolute;
+      left: 34%;
+      bottom: 8%;
+      transform: translateX(-50%);
       transform: skewX(-15deg);
-      font-family: inherit;
       padding: 0.9rem 1rem;
       border-radius: 0.2rem;
       transition: all 0.2s;
@@ -195,9 +195,12 @@ export const Card = styled.div`
 
       .btnText {
         font-size: 1.3rem;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
         display: inline-block;
         transform: skewX(15deg);
         backface-visibility: hidden;
+        z-index: 1;
       }
 
       &::after {
@@ -231,10 +234,6 @@ export const Card = styled.div`
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
       }
     }
-  }
-
-  .fontawasomeIcons {
-    margin-right: 0.5rem;
   }
 `
 
