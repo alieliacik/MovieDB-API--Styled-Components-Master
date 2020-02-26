@@ -1,68 +1,96 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 style='text-align:center;'> MOVIE DB API </h1>
+<strong> In this project, I used the most updated React Js futures with Styled Components, I used CSS Transition to animate when unmount something from DOM. I took data from THE MOVIE DATABASE API and showed user different data in different situations with nice animations. .</strong>
 
-## Available Scripts
+![firstAnimation](https://user-images.githubusercontent.com/57728302/75310802-da21c500-5822-11ea-859c-86246748a13e.gif)
+<hr>
 
-In the project directory, you can run:
+&nbsp;
 
-### `npm start`
+<strong> Lets start with first animation. I realy like play with aniamtions. I did not use any css library. Because I know how heavy they for for big applications. My firs animation appears once per minute. I didn't want to show user when they visit home page every time. One minute still not to much but of course I can determine the time. Now see the picture below.  </strong>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+&nbsp;
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![timeStamp](https://user-images.githubusercontent.com/57728302/75311016-6fbd5480-5823-11ea-896e-2c7f7e4cf4c0.JPG)
 
-### `npm test`
+&nbsp;
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+<strong> When component load first, I handle current timeStamp and compare it the other timeStamp. If I dont have any timeStamp (at the first visit) or my current timeStamp 6000ms (1m) bigger than stored timeStamp I set isFirstVisit true and triger first animation with help of CSS Transition and Styled Components. CSS Transition important because I can animate and remove it from the DOM when the animation and instead of hiding it. Small touches for better user experience...  </strong>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+&nbsp;
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![Csstransition remove from dom](https://user-images.githubusercontent.com/57728302/75311429-b6f81500-5824-11ea-935d-1fb4d27934ed.JPG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+&nbsp;
 
-### `npm run eject`
+<hr>
+![data](https://user-images.githubusercontent.com/57728302/74435637-e1180300-4e32-11ea-80d0-3ad638fefbd1.JPG)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<hr>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+&nbsp;
+<strong> As you can see for looping through on data, I needed to convert it array of object. </strong>
+</br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+&nbsp;
+&nbsp;
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![array-push](https://user-images.githubusercontent.com/57728302/74435811-48ce4e00-4e33-11ea-8ce6-9be61d41ef84.JPG)
 
-## Learn More
+<hr>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+&nbsp;
+&nbsp;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<strong> Immutable way of setData. I didn't touch original state while updating it. For beter user experience I closed opened menu when user clicked another one. 
+  &nbsp;
 
-### Code Splitting
+</strong>
+&nbsp;
+&nbsp;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+![update-object](https://user-images.githubusercontent.com/57728302/74436484-8b445a80-4e34-11ea-9850-83d2c36632de.JPG)
 
-### Analyzing the Bundle Size
+<hr>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+<strong> First map function while maping each section, also I needed to handle section name after user click section. 
+  &nbsp;
 
-### Making a Progressive Web App
+</strong>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+&nbsp;
+&nbsp;
 
-### Advanced Configuration
+![first-map](https://user-images.githubusercontent.com/57728302/74436305-34d71c00-4e34-11ea-9e3e-402616004a43.JPG)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+<hr>
 
-### Deployment
+<strong> Power of Styled Components !! 
+  &nbsp;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+</strong>
 
-### `npm run build` fails to minify
+&nbsp;
+&nbsp;
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![power-of-styled-components](https://user-images.githubusercontent.com/57728302/74436837-1cb3cc80-4e35-11ea-909c-e132d25cfb55.JPG)
+
+
+<hr>
+
+<strong> I needed to loop thgrough on list items. I dind't need another div, that's why I used 'React.Fragment'
+  &nbsp;
+
+</strong>
+
+&nbsp;
+&nbsp;
+
+![second-map](https://user-images.githubusercontent.com/57728302/74436906-3e14b880-4e35-11ea-8dfe-8d61a65203ee.JPG)
+
+
+<hr>
+
+<h4><strong>Used technologies: </strong> React JS (React Hooks, Styled Components), HTML, CSS.  </h4>
+<h3>Netlify Link: https://quizzical-hopper-24a893.netlify.com</h3>
+
