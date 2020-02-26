@@ -1,6 +1,6 @@
 <h1 style='text-align:center;'> MOVIE DB API </h1>
 
-<strong> In this project, I used the most updated React Js futures with Styled Components, I used CSS Transition to animate when unmount something from DOM. I took data from THE MOVIE DATABASE API and showed user different data in different situations with nice animations. .</strong>
+<strong> In this project, I used the most updated React Js futures with Styled Components, I used CSS Transition to animate when unmount something from DOM. I took data from THE MOVIE DATABASE API and showed user different data in different situations with nice animations. . The project is has responsive design for all devices. </strong>
 
 &nbsp;
 
@@ -21,8 +21,7 @@
 
 &nbsp;
 
-
-<strong>And resul. Not this of course, but like this. </strong>
+<strong> When component load first, I handle current timeStamp and compare it the other timeStamp. If I dont have any timeStamp (at the first visit) or my current timeStamp 6000ms (1m) bigger than stored timeStamp I set isFirstVisit true and triger first animation with help of CSS Transition and Styled Components. CSS Transition important because I can animate and remove it from the DOM when the animation and instead of hiding it. Small touches for better user experience. And the result. Not this of course, but like this. </strong>
 
 &nbsp;
 
@@ -30,7 +29,7 @@
 
 
 
-<strong> When component load first, I handle current timeStamp and compare it the other timeStamp. If I dont have any timeStamp (at the first visit) or my current timeStamp 6000ms (1m) bigger than stored timeStamp I set isFirstVisit true and triger first animation with help of CSS Transition and Styled Components. CSS Transition important because I can animate and remove it from the DOM when the animation and instead of hiding it. Small touches for better user experience...  </strong>
+<strong> Remove it from DOM after it finish </strong>
 
 &nbsp;
 
@@ -42,7 +41,7 @@
 
 <h2>CSS</h2>
 
-<strong> For designing I used 'font-size: 62.5%' aproach. Because it is very easy to use and make your design responsive. Now see the picture below. </strong>
+<strong> For design I used 'font-size: 62.5%' aproach. Because it is very easy to use and make your design responsive. Now see the picture below. </strong>
 
 &nbsp;
 
@@ -64,7 +63,7 @@
 
 &nbsp;
 
-<strong>In this project I went with Flexbox instead of Grid system. Grid system was also OK but according to https://caniuse.com , 97% of browsers can run flexbox without problem while this is 93% for Grid CSS. I have used a lot of excellent CSS properties suc as clip-path, background-visibility (it is esential for my cards that can turn), perpective, background-clip, -webkit-scrollbar, mask-image, mask-size and the most important one, advanced used of background image propery. See the pictures below... </strong>
+<strong>In this project I went with Flexbox instead of Grid system. Grid system was also OK but according to https://caniuse.com , 97% of browsers can run flexbox without problem while this is 93% for Grid CSS. I have used a lot of excellent CSS properties suc as clip-path, background-visibility (it is esential for my cards that can turnand has 3 layer), perpective, background-clip, -webkit-scrollbar, mask-image, mask-size and the most important one, advanced used of background image propery. See the pictures below... </strong>
 </br>
 
 &nbsp;
@@ -112,7 +111,7 @@
 
 &nbsp;
 
-<strong> In this project I also used Material UI for Pagination. You can see how I override Material UI components with Styled Components. It is realy powerful. </strong>
+<strong> In this project I also used Material UI for Pagination. You can see how I override Material UI styles with Styled Components. It is realy powerful. </strong>
 
 &nbsp;
 
@@ -126,7 +125,29 @@
 
 ![4 different class for animation modal](https://user-images.githubusercontent.com/57728302/75315980-27596300-5832-11ea-8a06-746fd13d9efc.JPG)
 
+<hr>
+
+<h2>JAVASCRIPT</h2>
+
 &nbsp;
+
+<strong> For improving my component structure skills, I didn't use Redux or Context Api in this project. Passoing props wasn't easy but I needed to double think about component structure. I had three main container, one main presentational component and couple of the other components. As you can see on the picture, my container components handle stores movies that coming from Api, set loading, handle erorrs, scroll top after page change, handle page count for each request and pass data to pagination to create pagination container according the number total page count. They also handle current page data and make Api request accordong to it. After all this work they pass data to main presentational component Movies. </strong>
+
+&nbsp;
+
+![Remote states](https://user-images.githubusercontent.com/57728302/75320566-fa5e7d80-583c-11ea-8cbd-9be2fe7c0e72.JPG)
+
+&nbsp;
+
+<strong> Here a part of my main presentational component. It handles array of movies data, display it with map function and returns each card. Some of movies didn't have poster and backgdrop path. I eliminated them before display. Also I needed to prevent rendering this component if there is no Api request any wehere in the application. </strong>
+
+&nbsp;
+
+![eliminatePosterless](https://user-images.githubusercontent.com/57728302/75320664-2e39a300-583d-11ea-9901-93ea8b7e70e9.JPG)
+
+&nbsp;
+
+
 
 
 
