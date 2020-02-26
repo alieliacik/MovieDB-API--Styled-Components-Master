@@ -14,7 +14,7 @@
 
 
 
-<strong> Lets start with first animation. I realy like play with aniamtions. I did not use any css library. Because I know how heavy they for for big applications. My firs animation appears once per minute. I didn't want to show user when they visit home page every time. One minute still not to much but of course I can determine the time. Now see the picture below.  </strong>
+<strong> Let's start with the first animation. I really like to play with animations. I did not use any CSS library. I know how they can make slow big applications. My first animation appears once per minute. I didn't want to show the user when they visit the home page every time. One minute still not too much, but of course, I can determine the time. Now see the picture below.  </strong>
 
 &nbsp;
 
@@ -22,7 +22,7 @@
 
 &nbsp;
 
-<strong> When component load first, I handle current timeStamp and compare it the other timeStamp. If I dont have any timeStamp (at the first visit) or my current timeStamp 6000ms (1m) bigger than stored timeStamp I set isFirstVisit true and triger first animation with help of CSS Transition and Styled Components. React Transition Group important because I can animate and remove it from the DOM when the animation and instead of hiding it. Small touches for better user experience. And the result. Not this of course, but like this. </strong>
+<strong> When component load first, I handle current timeStamp and compare it the other timeStamp. If I don't have any timeStamp (at the first visit) or my current timeStamp 6000ms (1m) bigger than the stored timeStamp I set isFirstVisit equal to true and trigger the first animation with the help of React Transition Group and Styled Components. React Transition Group important because I can animate and change the display property to none instead of hiding it after the animation finish. Small touches for better user experience. And the result. </strong>
 
 &nbsp;
 
@@ -30,7 +30,7 @@
 
 
 
-<strong> Remove it from DOM after it finish </strong>
+<strong> Change the display property to none instead of hiding it after the animation finish. </strong>
 
 &nbsp;
 
@@ -42,7 +42,7 @@
 
 <h2>CSS</h2>
 
-<strong> For design I used 'font-size: 62.5%' aproach. Because it is very easy to use and make your design responsive. Now see the picture below. </strong>
+<strong> For design I used 'font-size: 62.5%' technic. Because it is effortless to use and make your design responsive. Now see the picture below. </strong>
 
 &nbsp;
 
@@ -52,7 +52,7 @@
 
 &nbsp;
 
-<strong> After I made 0 all margin and padding for whole dom elements including before and after elemens, I sat font size to %62.5 with help of Styled Components createGlobalStyle. It means every one rem equal 10px now. Of course I could use 10px instead of 1rem. Why I didn't use px instead of rem because if you build your whole pramater with rem when you start to do make your device responsive for small screen devices, all you have to do decrease font size and your whole 1rems 8.8px now instead of 10 . I reached this result with just decreasing html font size. Font sizes, margins, paddings, height and widths have rem value. with small decrease of changing ram my website almost full responsive for I tablet except couple of small things. See the gif below... </strong>
+<strong> After I made 0 all margins and paddings for whole dom elements, including before and after elements, I sat font size to %62.5 with the help of Styled Components createGlobalStyle. It means every one rem equal 10px now. Of course, I could use 10px instead of 1rem. Why I didn't use px instead of rem because if you build your whole parameter with rem when you start to make your device responsive for small screen devices, all you have to do decrease font size and your whole 1rems 8.8px now instead of 10. I reached this result with just decreasing HTML font size. Font sizes, margins, paddings, height and widths have rem value. With a small decrease of HTML font-size value,  my website almost full responsive for I tablet except a couple of little things. See the gif below... </strong>
 
 &nbsp;
 
@@ -64,7 +64,7 @@
 
 &nbsp;
 
-<strong>In this project I went with Flexbox instead of Grid system. Grid system was also OK but according to https://caniuse.com , 97% of browsers can run flexbox without problem while this is 93% for Grid CSS. I have used a lot of excellent CSS properties suc as clip-path, background-visibility (it is esential for my cards that can turnand has 3 layer), perpective, background-clip, -webkit-scrollbar, mask-image, mask-size and the most important one, advanced used of background image propery. See the pictures below... </strong>
+<strong>In this project, I went with Flexbox instead of the Grid system. Grid system was also OK, but according to https://caniuse.com, 97% of browsers can run Flexbox without a problem while this is 93% for Grid CSS. I have used a lot of excellent CSS properties such as clip-path, background-visibility (it is essential for my cards that can turn and has three layers), perspective, background-clip, -webkit-scrollbar, mask-image, and mask-size. The most important one is the advanced use of the background-image property. See the pictures below...  </strong>
 </br>
 
 &nbsp;
@@ -79,7 +79,7 @@
 
 &nbsp;
 
-<strong>Rating becomes width of background-color of stars. When I set color: transparent and background-clip: text for html stars, background image paints stars. And a little bit low opacity black with that has angle for seeing stars better  </strong>
+<strong>Rating becomes the width of background-color of stars. When I set color: transparent and background-clip: text for HTML stars, background image paints stars. And a little bit low opacity black stays around stars that have an angle for seeing stars better.  </strong>
 
 &nbsp;
 
@@ -96,7 +96,7 @@
 
 &nbsp;
 
-<strong> Here another usage of background image for colorful text that has linear gradient color. </strong>
+<strong> Here is another usage of the background image. I make text colorful with the linear-gradient property. </strong>
 
 &nbsp;
 
@@ -104,7 +104,7 @@
 
 &nbsp;
 
-<strong> I realy like SVG's as background image. Here is another example with mask-size and mask image properties. This approach same es things colorful with background-color. I have @supporst future here. If a browser doesn't support mask-size or mask-image property as a solution they can show the SVG as a backgorund-image otherwise mask-image and mask-size works. </strong>
+<strong>  I really like SVG's as a background image. Here is another example of mask-size and mask image properties. This approach same as the painting background of the element. I have @supporst future here. If a browser doesn't support mask-size or mask-image features as a solution, they can show the SVG as a background-image otherwise mask-image and mask-size works. </strong>
 
 &nbsp;
 
@@ -112,7 +112,7 @@
 
 &nbsp;
 
-<strong> In this project I also used Material UI for Pagination. You can see how I override Material UI styles with Styled Components. It is realy powerful. </strong>
+<strong> In this project, I also used Material UI for Pagination. You can see how I override Material UI styles with Styled Components. It is really powerful. </strong>
 
 &nbsp;
 
@@ -120,7 +120,7 @@
 
 &nbsp;
 
-<strong> And here you can see how I used Styled Components and CSS Transitions for animation Modal while it is opening and closing. A lot of animation work here. </strong>
+<strong> And here, you can see how I used Styled Components and React Transition Group for animation Modal while it is opening and closing. A lot of animation work here. </strong>
 
 &nbsp;
 
@@ -132,7 +132,7 @@
 
 &nbsp;
 
-<strong> For improving my component structure skills, I didn't use Redux or Context Api in this project. Passoing props wasn't easy but I needed to double think about component structure. I had three main container, one main presentational component and couple of the other components. As you can see on the picture, my container components handle stores movies that coming from Api, set loading, handle erorrs, scroll top after page change, handle page count for each request and pass data to pagination to create pagination container according the number total page count. They also handle current page data and make Api request accordong to it. After all this work they pass data to main presentational component Movies. </strong>
+<strong>  For improving my component structure skills, I didn't use Redux or Context API in this project. Passing props wasn't easy, but I needed to double think about component structure every time. I had three main containers, one main presentational component and a couple of the other components. As you can see in the picture, my container components stores movies that coming from API. They set loading, handle errors, scroll top after page change, handle page count for each request and pass data to pagination to create pagination structure according to the number total page count. They also handle current page data and make Api request according to it. After all this work, they pass data to main presentational component Movies. </strong>
 
 &nbsp;
 
@@ -140,7 +140,7 @@
 
 &nbsp;
 
-<strong> Here a part of my main presentational component. It handles array of movies data, display it with map function and returns each card. Some of movies didn't have poster and backgdrop path. I eliminated them before display. Also I needed to prevent rendering this component if there is no Api request any wehere in the application. </strong>
+<strong> Here a part of my main presentational component. It handles an array of movie data, displays it with map function and returns each card. Some movies didn't have posters and backdrop paths. I eliminated them before display. Also, I needed to prevent rendering this component if there is no API requests anywhere in the application. </strong>
 
 &nbsp;
 
@@ -148,15 +148,7 @@
 
 &nbsp;
 
-<strong> Here a part of my main presentational component. It handles array of movies data, display it with map function and returns each card. Some of movies didn't have poster and backgdrop path. I eliminated them before display. Also I needed to prevent rendering this component if there is no Api request any wehere in the application. </strong>
-
-&nbsp;
-
-![eliminatePosterless](https://user-images.githubusercontent.com/57728302/75320664-2e39a300-583d-11ea-9901-93ea8b7e70e9.JPG)
-
-&nbsp;
-
-<strong> I triggered error with button that stays right bottom of the page.  </strong>
+<strong> I triggered error with a button that stays right bottom of the page. </strong>
 
 &nbsp;
 
@@ -164,7 +156,7 @@
 
 &nbsp;
 
-<strong> My first approach was sending HTTP Request for each key stroke but then I changed my mind because of performance purposes. For making HTTP Request woth onSubmit, I needed to use uncontrolled components. Here you can see how I did it. </strong>
+<strong> My first approach was sending HTTP Request for each keystroke, but then I changed my mind because of performance purposes. For making HTTP Request with onSubmit, I needed to use uncontrolled components. Here you can see how I did it. </strong>
 
 &nbsp;
 
@@ -172,7 +164,7 @@
 
 &nbsp;
 
-<strong> For remoting on components I used React Router and 'history.push()' method was very useful when I used it for my logo. </strong>
+<strong> For remoting on components, I used React Router, and the 'history.push()' method was beneficial when I used it for my logo to go home page. </strong>
 
 &nbsp;
 
