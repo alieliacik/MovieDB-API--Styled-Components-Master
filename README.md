@@ -174,6 +174,7 @@
 
 <hr>
 
+<h3>Netlify Link: https://agitated-hugle-838e6c.netlify.com/#/</h3>
 <h4><strong>Used technologies: </strong> React JS (React Hooks, Styled Components, React Transition Group, React Router, Material UI), HTML, CSS.  </h4>
 
 
