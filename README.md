@@ -1,13 +1,14 @@
 <h1 style='text-align:center;'> MOVIE DB API </h1>
 
-<strong> In this project, I used the most updated React Js futures with Styled Components, I used CSS Transition to animate when unmount something from DOM. I took data from THE MOVIE DATABASE API and showed user different data in different situations with nice animations. . The project is has responsive design for all devices. </strong>
+<strong> In this project, I used the most updated React Js futures with Styled Components; I used CSS Transition to animate when to mount or unmount something from DOM. I took data from THE MOVIE DATABASE API and showed users different data in different situations with beautiful animations.  The project has a responsive design for all devices. </strong>
 
+<h3>Netlify Link: https://agitated-hugle-838e6c.netlify.com/#/popular</h3>
 &nbsp;
 
 ![cardsGif](https://user-images.githubusercontent.com/57728302/75316198-a8185f00-5832-11ea-8075-1ca93964b90d.gif)
 
 
-<h3>Netlify Link: https://agitated-hugle-838e6c.netlify.com/#/popular</h3>
+
 <hr>
 
 
