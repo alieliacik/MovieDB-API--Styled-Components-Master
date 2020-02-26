@@ -9,8 +9,9 @@ export const modalImageEnterAnimation = keyframes`
 
 export const overviewEnterAnimation = keyframes`
   0% {transform:translate(-50%, -50%) scale(0)}
-  54% { transform:translate(-50%, -50%) scale(0)}
-  55% { transform:translate(-50%, -40%) scale(1)}
+  60% { transform:translate(-50%, -40%) scale(0);height: 20vh;}
+  64% { transform:translate(-50%, -40%) scale(0);height: 20vh;}
+  65% { transform:translate(-50%, -40%) scale(1);height: 30vh;}
   100% {transform:translate(-50%, -23%) scale(1)}
 `
 export const modalImageExitAnimation = keyframes`
@@ -92,7 +93,7 @@ const StyledModal = styled.div`
     top: 50%;
     left: 50%;
     width: 79.5%;
-    height: 38vh;
+    height: 45vh;
     border-radius: 3px;
     overflow: hidden;
     display: flex;
