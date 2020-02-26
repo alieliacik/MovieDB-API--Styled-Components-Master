@@ -167,7 +167,7 @@
 
 &nbsp;
 
-![triger error](https://user-images.githubusercontent.com/57728302/75321118-1adb0780-583e-11ea-9cca-50ffa212223e.JPG)
+![uncontroledcomponents](https://user-images.githubusercontent.com/57728302/75321788-85407780-583f-11ea-9cd4-d4a8b5236b89.JPG)
 
 &nbsp;
 
