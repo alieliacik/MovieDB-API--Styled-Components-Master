@@ -16,9 +16,14 @@ const StyledHomePage = styled.section`
     font-size: 3rem;
     display: inline-block;
     font-weight: bold;
-    background-image: linear-gradient(to right, rgba(194, 54, 22, 0.8), black, black);
-    color: transparent;
-    -webkit-background-clip: text;
+    color: black;
+    
+    @supports (-webkit-background-clip: text){
+      color: transparent;
+      -webkit-background-clip: text;
+      background-image: linear-gradient(to right, rgba(194, 54, 22, 0.8), black, black);
+    }
+
 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     margin-top: 11rem;
