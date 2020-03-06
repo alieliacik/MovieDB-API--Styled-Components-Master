@@ -9,7 +9,7 @@ import axios from "axios"
 
 const SearchMovies = props => {
   const [searchMovies, setSearchMovies] = useState(null)
-  const [searchInput, setSearchInput] = useState("1")
+  const [searchInput, setSearchInput] = useState("superman")
   const [inputValue, setInputValue] = useState("")
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(false)
@@ -39,10 +39,10 @@ const SearchMovies = props => {
   }
 
   const onSubmitHandler = event => {
-    event.stopPropagation()
     event.preventDefault()
     if (inputValue.length) {
       setSearchInput(inputValue)
+      setCurrentPage(1)
     } else {
       alert("Please enter a valid input value...")
     }
