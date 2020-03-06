@@ -22,7 +22,7 @@ const StyledHomePage = styled.section`
     @supports (-webkit-background-clip: text) {
       background-image: linear-gradient(to right, rgba(194, 54, 22, 0.8), black, black);
       color: transparent;
-      -webkit-background-clip: text;
+      background-clip: text;
     }
 
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
