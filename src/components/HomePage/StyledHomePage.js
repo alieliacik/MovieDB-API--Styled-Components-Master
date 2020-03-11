@@ -17,7 +17,8 @@ const StyledHomePage = styled.section`
   .mainContent {
     font-size: 3rem;
     font-weight: bold;
-    color: black;
+    color: rgba(251, 197, 49,1.0);
+    text-shadow: 0 1px 1px rgba(47, 54, 64,1.0);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     margin-top: 11rem;
     margin-left: 8rem;
