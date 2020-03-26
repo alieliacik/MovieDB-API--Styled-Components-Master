@@ -35,8 +35,8 @@ export const Card = styled.div`
   }
 
   & > div {
-    top: -1rem;
-    left: -1rem;
+    top: 0;
+    left: 0;
     width: 18rem;
     height: 27rem;
     position: absolute;
