@@ -56,7 +56,7 @@ export const Card = styled.div`
   }
 
   .front {
-    background-image: ${props => `linear-gradient(170deg, rgba(53, 59, 72, 0.98) 0%, rgba(53, 59, 72, 0.98) 8%, transparent 23%), url(http://image.tmdb.org/t/p/w200/${props.res.poster_path})`};
+    background-image: ${(props) => `linear-gradient(170deg, rgba(53, 59, 72, 0.98) 0%, rgba(53, 59, 72, 0.98) 8%, transparent 23%), url(http://image.tmdb.org/t/p/w200/${props.res.poster_path})`};
     background-size: cover;
     transform: rotateY(0);
   }
@@ -182,8 +182,6 @@ export const Card = styled.div`
       position: absolute;
       left: 34%;
       bottom: 8%;
-      transform: translateX(-50%);
-      transform: skewX(-15deg);
       padding: 0.9rem 1rem;
       border-radius: 0.2rem;
       transition: all 0.2s;
@@ -192,14 +190,13 @@ export const Card = styled.div`
       background-color: #192a56;
       letter-spacing: 2px;
       cursor: pointer;
+      backface-visibility: hidden;
 
       .btnText {
         font-size: 1.3rem;
         font-family: "Lato", sans-serif;
         font-weight: 300;
         display: inline-block;
-        transform: skewX(15deg);
-        backface-visibility: hidden;
       }
 
       &::after {
@@ -217,7 +214,6 @@ export const Card = styled.div`
       }
 
       &:hover {
-        transform: translateY(-3px) skewX(-15deg);
         box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 
         &::after {
@@ -229,7 +225,6 @@ export const Card = styled.div`
       &:active,
       &:focus {
         outline: none;
-        transform: translateY(-1px) skewX(-15deg);
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
       }
     }
