@@ -13,9 +13,7 @@ export const StyledContainer = styled.div`
 
 export const Row = styled.section`
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  max-width: 105rem;
   min-height: 90vh;
   margin: 0 auto;
   background-color: rgba(245, 246, 250, 1);
@@ -25,20 +23,22 @@ export const Row = styled.section`
 export const Card = styled.div`
   perspective: 120rem;
   position: relative;
-  width: 18rem;
-  height: 27rem;
-  margin: 2rem;
+  width: 21%;
+  height: calc(22vw / 3 * 4);
+  margin: 2%;
   text-align: center;
 
-  @media (max-width: 55em) {
-    margin: 1.7rem;
+  @media (max-width: 48em) {
+    width: 42%;
+    height: calc(43vw / 3 * 4);
+    margin: 4%;
   }
 
   & > div {
     top: 0;
     left: 0;
-    width: 18rem;
-    height: 27rem;
+    width: 100%;
+    height: 100%;
     position: absolute;
     border-radius: 3px;
     backface-visibility: hidden;
@@ -64,7 +64,11 @@ export const Card = styled.div`
 
   .ratingFront {
     color: white;
-    font-size: 2.5rem;
+    font-size: calc(2.5vw);
+
+    @media (max-width: 48em) {
+      font-size: calc(5vw);
+    }
     font-weight: 400;
     position: absolute;
     left: 2%;
@@ -73,7 +77,12 @@ export const Card = styled.div`
 
   .movieTittle {
     color: black;
-    font-size: 2.5rem;
+    font-size: calc(2.5vw);
+
+    @media (max-width: 48em) {
+      font-size: calc(5vw);
+    }
+
     font-weight: 700;
     position: absolute;
     top: 50%;
@@ -83,7 +92,11 @@ export const Card = styled.div`
 
   .noPoster {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: calc(0.8vw);
+
+    @media (max-width: 48em) {
+      font-size: calc(1.6vw);
+    }
     font-weight: 400;
   }
 
@@ -140,11 +153,18 @@ export const Card = styled.div`
 
     .title {
       font-size: 2.3rem;
+
+      @media (max-width: 48em) {
+        font-size: 4rem;
+        line-height: 3.85rem;
+        height: 19rem;
+      }
+
       font-family: "Lato";
       padding: 3rem 1rem 0 1rem;
       font-weight: 400;
       letter-spacing: 2px;
-      line-height: 2.05rem;
+      line-height: 1.95rem;
       height: 9rem;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -167,12 +187,20 @@ export const Card = styled.div`
     }
 
     .rating {
-      font-size: 5rem;
+      font-size: calc(5vw);
+
+      @media (max-width: 48em) {
+        font-size: calc(10vw);
+      }
       font-weight: 400;
     }
 
     .voteCount {
-      font-size: 0.9rem;
+      font-size: calc(0.9vw);
+
+      @media (max-width: 48em) {
+        font-size: calc(1.8w);
+      }
       letter-spacing: 2px;
       font-weight: 300;
     }
@@ -183,7 +211,11 @@ export const Card = styled.div`
       margin-top: 2.4rem;
       text-transform: uppercase;
       position: relative;
-      font-size: 1.3rem;
+      font-size: calc(1.3vw);
+
+      @media (max-width: 48em) {
+        font-size: calc(2.6vw);
+      }
     }
 
     .releaseDate {
@@ -193,7 +225,11 @@ export const Card = styled.div`
       margin-top: 2.4rem;
       text-transform: uppercase;
       position: relative;
-      font-size: 1.3rem;
+      font-size: calc(1.3vw);
+
+      @media (max-width: 48em) {
+        font-size: calc(2.6vw);
+      }
     }
 
     .fontawasomeIcons {
@@ -204,7 +240,7 @@ export const Card = styled.div`
       position: absolute;
       left: 34%;
       bottom: 8%;
-      padding: 0.9rem 1rem;
+      padding: 0.9rem 1.6rem;
       border-radius: 0.2rem;
       transition: all 0.2s;
       border: none;
@@ -215,7 +251,11 @@ export const Card = styled.div`
       backface-visibility: hidden;
 
       .btnText {
-        font-size: 1.3rem;
+        font-size: calc(1.3vw);
+
+        @media (max-width: 48em) {
+          font-size: calc(2.6vw);
+        }
         font-family: "Lato", sans-serif;
         font-weight: 300;
         display: inline-block;
@@ -266,7 +306,11 @@ export const PaginationDiv = styled.div`
 
   & > nav > ul > li > button {
     color: black;
-    font-size: 1.4rem;
+    font-size: calc(1.4vw);
+
+    @media (max-width: 48em) {
+      font-size: calc(2.8vw);
+    }
     font-weight: 300;
     &:hover {
       background-color: rgba(47, 54, 64, 0.9);
