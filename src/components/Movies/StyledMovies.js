@@ -248,7 +248,6 @@ export const Card = styled.div`
       background-color: #192a56;
       letter-spacing: 2px;
       cursor: pointer;
-      backface-visibility: hidden;
 
       .btnText {
         font-size: calc(1.3vw);
