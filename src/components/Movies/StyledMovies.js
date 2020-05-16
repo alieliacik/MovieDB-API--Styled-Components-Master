@@ -1,7 +1,7 @@
-import family from "../../assets/SVG/family.svg"
-import camera from "../../assets/SVG/video-camera.svg"
+import family from "../../assets/SVG/family.svg";
+import camera from "../../assets/SVG/video-camera.svg";
 
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const StyledContainer = styled.div`
   padding: 0 5rem;
@@ -9,7 +9,7 @@ export const StyledContainer = styled.div`
   @media (max-width: 55em) {
     padding: 0 1.5rem;
   }
-`
+`;
 
 export const Row = styled.section`
   display: flex;
@@ -20,7 +20,7 @@ export const Row = styled.section`
   margin: 0 auto;
   background-color: rgba(245, 246, 250, 1);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
-`
+`;
 
 export const Card = styled.div`
   perspective: 120rem;
@@ -56,7 +56,8 @@ export const Card = styled.div`
   }
 
   .front {
-    background-image: ${(props) => `linear-gradient(170deg, rgba(53, 59, 72, 0.98) 0%, rgba(53, 59, 72, 0.98) 8%, transparent 23%), url(http://image.tmdb.org/t/p/w200/${props.res.poster_path})`};
+    background-image: ${(props) =>
+      `linear-gradient(170deg, rgba(53, 59, 72, 0.98) 0%, rgba(53, 59, 72, 0.98) 8%, transparent 23%), url(http://image.tmdb.org/t/p/w200/${props.res.poster_path})`};
     background-size: cover;
     transform: rotateY(0);
   }
@@ -69,9 +70,30 @@ export const Card = styled.div`
     left: 2%;
     opacity: 0.4;
   }
+
+  .movieTittle {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .noPoster {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
   .back {
     color: #fff;
-    background-image: linear-gradient(to right bottom, rgba(0, 151, 230, 1), rgba(220, 221, 225, 1));
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 151, 230, 1),
+      rgba(220, 221, 225, 1)
+    );
     transform: rotateY(180deg);
     overflow: hidden;
 
@@ -229,7 +251,7 @@ export const Card = styled.div`
       }
     }
   }
-`
+`;
 
 export const PaginationDiv = styled.div`
   width: 100%;
@@ -261,7 +283,6 @@ export const PaginationDiv = styled.div`
       color: white;
     }
   }
-`
+`;
 
-
-export default StyledContainer
+export default StyledContainer;

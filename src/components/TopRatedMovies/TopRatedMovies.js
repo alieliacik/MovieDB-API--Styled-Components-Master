@@ -1,58 +1,64 @@
-import React, { useEffect, useState } from "react"
-import Movies from "../Movies/Movies"
-import Modal from "../UI/Modal/Modal"
-import Spinner from "../UI/Spinner/Spinner"
-import ErrorPage from "../UI/ErrorPage/ErrorPage"
-import StayledErrorButton from "../UI/StyledUI/StayledErrorButton"
-import axios from "axios"
+import React, { useEffect, useState } from "react";
+import Movies from "../Movies/Movies";
+import Modal from "../UI/Modal/Modal";
+import Spinner from "../UI/Spinner/Spinner";
+import ErrorPage from "../UI/ErrorPage/ErrorPage";
+import StayledErrorButton from "../UI/StyledUI/StayledErrorButton";
+import axios from "axios";
 
-const TopRatedMovies = props => {
-  const [topRatedMovies, setTopRatedMovies] = useState(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
-  const [totalPageCount, setTotalPageCount] = useState(null)
-  const [currentPage, setCurrentPage] = useState(1)
+const TopRatedMovies = (props) => {
+  const [topRatedMovies, setTopRatedMovies] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
+  const [totalPageCount, setTotalPageCount] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const apiKey = "88ccf1279f26b61cf507f3cd3ea945b9"
+  const apiKey = "88ccf1279f26b61cf507f3cd3ea945b9";
 
   useEffect(() => {
-    setLoading(true)
-    window.scrollTo(0, 0)
+    setLoading(true);
+    window.scrollTo(0, 0);
     axios
-      .get(`https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=${currentPage}`)
-      .then(response => {
-        setTotalPageCount(response.data.total_pages)
-        setTopRatedMovies(response.data.results.slice(0, 12))
-        setLoading(false)
+      .get(
+        `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=${currentPage}`
+      )
+      .then((response) => {
+        setTotalPageCount(response.data.total_pages);
+        setTopRatedMovies(response.data.results);
+        setLoading(false);
       })
-      .catch(err => {
-        setError(true)
-        setLoading(false)
-      })
-  }, [currentPage])
+      .catch((err) => {
+        setError(true);
+        setLoading(false);
+      });
+  }, [currentPage]);
 
   const paginationHandler = (event, page) => {
-    setCurrentPage(page)
-  }
+    setCurrentPage(page);
+  };
 
-  let content = null
-  if (loading === true) content = <Spinner />
+  let content = null;
+  if (loading === true) content = <Spinner />;
   if (error === true)
     content = (
       <>
         <StayledErrorButton error={error} onClick={() => setError(!error)}>
-          <i className='fas fa-heart fa-2x'> </i>REPAIR
+          <i className="fas fa-heart fa-2x"> </i>REPAIR
         </StayledErrorButton>
         <ErrorPage />
       </>
-    )
+    );
   if (loading === false && error === false) {
     content = (
       <>
         <StayledErrorButton error={error} onClick={() => setError(true)}>
-          <i className='fas fa-heart-broken fa-2x'> </i> BREAK
+          <i className="fas fa-heart-broken fa-2x"> </i> BREAK
         </StayledErrorButton>
-        <Modal showModal={props.showModal} closeModal={props.closeModal} modalContent={props.modalContent} />
+        <Modal
+          showModal={props.showModal}
+          closeModal={props.closeModal}
+          modalContent={props.modalContent}
+        />
         <Movies
           showModal={props.showModal}
           totalPageCount={totalPageCount}
@@ -63,10 +69,10 @@ const TopRatedMovies = props => {
           loading={loading}
         />
       </>
-    )
+    );
   }
 
-  return <>{content}</>
-}
+  return <>{content}</>;
+};
 
-export default TopRatedMovies
+export default TopRatedMovies;
