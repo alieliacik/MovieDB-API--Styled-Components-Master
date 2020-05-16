@@ -154,11 +154,11 @@ export const Card = styled.div`
     .title {
       font-size: 2.3rem;
 
-      @media (max-width: 48em) {
+      /* @media (max-width: 48em) {
         font-size: 4rem;
         line-height: 3.85rem;
         height: 19rem;
-      }
+      } */
 
       font-family: "Lato";
       padding: 3rem 1rem 0 1rem;
